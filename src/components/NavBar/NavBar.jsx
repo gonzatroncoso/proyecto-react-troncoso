@@ -1,34 +1,23 @@
 import React from 'react';
-
+import Nav from 'react-bootstrap/Nav'
+import CartWidget from '../CartWidget/CartWidget';
 
   const  NavBar = () => {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light text-info bg-dark">
-        <h1 className= "w-100">Ecommerce</h1>
-      <div className="container-fluid ">
-        <a className="navbar-brand text-info bg-dark" href="#">Descuentos</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse text-info bg-dark" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active text-info bg-dark" aria-current="page" href="#">Productos</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-info bg-dark" href="#">Articulos</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-info bg-dark" href="#">Categorias</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-info bg-dark">Diseños</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-      
+          <Nav variant="tabs" defaultActiveKey="/home">
+      <Nav.Item>
+        <Nav.Link href="/home">Productos</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-1">Categorias</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-2" >
+          Novedades
+        </Nav.Link>
+      </Nav.Item>
+      <CartWidget  />
+    </Nav>
    );
   }
 
