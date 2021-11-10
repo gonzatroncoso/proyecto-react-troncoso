@@ -8,7 +8,7 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem'
     return (
         
             <Card style={{ width: '18rem' }} key={prods.id} >
-                                      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                                      <Card.Img variant="top" src={prods.imagen} />
                                       <Card.Body>
                                         <Card.Title>{prods.modelo}</Card.Title>
                                         <Card.Text>
